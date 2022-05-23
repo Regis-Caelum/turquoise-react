@@ -9,7 +9,7 @@ export default function Header() {
       </div>
       <img
         className="headerImg"
-        src="https://source.unsplash.com/650x940/?Beach"
+        src="https://source.unsplash.com/650x940/?Party"
         alt=""
       />
     </div>
