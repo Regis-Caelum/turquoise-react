@@ -1,5 +1,5 @@
- const { createProxyMiddleware } = require('http-proxy-middleware');
-     
-    module.exports = function(app) {
-        app.use(createProxyMiddleware('/api/v1/**', { target: 'https://django-backend-turquoise.herokuapp.com' }));
-    };
+const { createProxyMiddleware } = require("http-proxy-middleware")
+
+module.exports = app => {
+    app.use('/api/v1/**', createProxyMiddleware({ target: 'https://django-backend-turquoise.herokuapp.com', changeOrigin: true}))
+}

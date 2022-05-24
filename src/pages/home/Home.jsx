@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("get/articles" + search);
+      const res = await axios.get("https://django-backend-turquoise.herokuapp.com/api/v1/get/articles" + search);
       setPosts(res.data.payload);
     };
     fetchPosts();
