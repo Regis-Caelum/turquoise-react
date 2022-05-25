@@ -13,14 +13,12 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("https://react-frontend-turquoise.herokuapp.com/api/v1/get/articles/title/" + path);
+      const res = await axios.get("https://django-backend-turquoise.herokuapp.com/api/v1/get/articles/title/" + path);
       setPost(res.data.payload[0]);
       setTitle(res.data.payload[0].title);
       setDesc(res.data.payload[0].content);
-      console.log(res.data.payload[0])
     };
     getPost();
-
   }, [path]);
 
   return (

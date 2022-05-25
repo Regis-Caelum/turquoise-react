@@ -1,5 +1,4 @@
 .top {
-  width: 100%;
   height: 50px;
   background-color: white;
   position: sticky;
@@ -19,7 +18,7 @@
 }
 
 .topCenter {
-  flex: 6;
+  flex: 3;
 }
 
 .topIcon {
@@ -57,4 +56,25 @@
   color: #666;
   cursor: pointer;
   margin-left: 15px;
+}
+
+@media screen and (max-width: 710px) {
+  body{
+    overflow-x: hidden;
+    /* Remove scrollbar: Firefox Android Users */
+    scrollbar-width: none;
+  }
+  .topLeft{
+    float: left;
+  }
+  .topListItem {
+    margin-right: 6px;
+    font-size: 13px;
+    font-weight: 350;
+    cursor: pointer;
+  }
+  /* Remove Scrollbar: Better scroll on mobile: Chrome,Opera */
+  body::-webkit-scrollbar {
+    display: none;
+  }
 }
