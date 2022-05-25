@@ -18,7 +18,7 @@ export default function SinglePost() {
       setTitle(res.data.payload[0].title);
       setDesc(res.data.payload[0].content);
     };
-    getPost();
+    getPost().then();
   }, [path]);
 
   return (
